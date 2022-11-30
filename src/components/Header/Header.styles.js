@@ -31,23 +31,40 @@ export const NavMenu = styled.div`
   gap: 2rem;
 
   @media ${(props) => props.theme.breakpoints.md} {
+    display: none;
+  }
+`;
+
+export const SideBar = styled.div`
+  display: none;
+
+  @media ${(props) => props.theme.breakpoints.md} {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    list-style: none;
     height: 100vh;
-    position: absolute;
+    font-size: 1.5rem;
+    /* padding: 50px 0; */
+    position: fixed;
     top: 0;
-    right: ${({ mobileNav }) => (mobileNav ? 0 : "-100%")};
+    bottom: 0;
+    right: 0;
+    /* right: ${({ mobileNav }) => (mobileNav ? 0 : "-100%")}; */
+    transform: translateX(${({ mobileNav }) => (mobileNav ? 0 : 100)}vw);
+    visibility: ${({ mobileNav }) => (mobileNav ? "visible" : "hidden")};
     opacity: 1;
     transition: all 0.5s ease;
-    background: pink;
+    background: ${(props) => props.theme.colors.bg.primary};
     color: ${(props) => props.theme.colors.bg.primaryBlue};
   }
 `;
 
 export const NavItem = styled.li`
   border-bottom: 2px solid transparent;
-  color: red;
 
   @media ${(props) => props.theme.breakpoints.md} {
     width: 100%;

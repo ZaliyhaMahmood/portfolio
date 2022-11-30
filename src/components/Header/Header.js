@@ -12,6 +12,7 @@ import {
   NavLink,
   NavMenu,
   OverlayContent,
+  SideBar,
 } from "./Header.styles";
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
@@ -47,7 +48,47 @@ const Header = () => {
             </NavItem>
           </NavMenu>
         </NavContainer>
+        {/* {mobileNav && (
+          <MobileOverlay> */}
+        <SideBar mobileNav={mobileNav}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <p> 01.</p>
+            <NavLink href="#skills">Skills</NavLink>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <p> 02.</p>
+            <NavLink href="#projects">Projects</NavLink>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <p> 03.</p>
+            <NavLink href="#contact">Contact</NavLink>
+          </div>
+        </SideBar>
+        {/* </MobileOverlay>
+        )} */}
       </HeaderContainer>
+
       {/* <HeaderContainer>
         <NavContainer>
           <Logo href="/">Z.Dev_</Logo>
