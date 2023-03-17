@@ -4,7 +4,6 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
   position: fixed;
   width: 100%;
-  top: 0;
 `;
 
 export const NavContainer = styled.nav`
@@ -46,7 +45,7 @@ export const SideBar = styled.div`
     align-items: center;
     width: 100%;
     list-style: none;
-    height: 100vh;
+    height: 100%;
     font-size: 1.5rem;
     /* padding: 50px 0; */
     position: fixed;
